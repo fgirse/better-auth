@@ -24,6 +24,10 @@ export const Users: CollectionConfig = {
     name:true,
   },
   fields: [
+    {
+      name: 'name',
+      type: 'text',
+    },
      {
       name: 'avatar',
       type: 'upload',

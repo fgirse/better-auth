@@ -142,6 +142,7 @@ export interface UserAuthOperations {
  */
 export interface User {
   id: string;
+  name?: string | null;
   avatar?: (string | null) | Media;
   roles?: ('admin' | 'editor' | 'user')[] | null;
   emailVerified?: boolean | null;
@@ -517,6 +518,7 @@ export interface PayloadMigration {
  * via the `definition` "users_select".
  */
 export interface UsersSelect<T extends boolean = true> {
+  name?: T;
   avatar?: T;
   roles?: T;
   emailVerified?: T;
