@@ -20,7 +20,13 @@ export default function Navbar() {
                <div className='flex items-center gap-2'>
                   {user ? (
                      <>
-
+                        {user.isAdmin && (
+                           <Button asChild className="bg-yellow-600/50 text-white hover:bg-yellow-400">
+                              <Link href="/admin">
+                                 <span className="uppercase">admin</span>
+                              </Link>
+                           </Button>
+                        )}
                         <Link
                            href="/dashboard"
                            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
